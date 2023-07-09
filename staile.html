@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobe_Bryant</title>
+    <link rel="stylesheet" href="senhorita-puff.css">
+    <style>
+            @font-face {
+        font-family: fodas ;
+        src: url(fontes/Fontspring-DEMO-greycliffcf-regular.otf) format(opentype);
+    }
+    </style>
+</head>
+<body>
+
+    
+    
+
+<div class="container">
+    <nav>
+        <div class="logo"><a class="wiki" href="https://pt.wikipedia.org/wiki/Kobe_Bryant">Wiki</a></div>
+        <div class="menu"><a class="Doc" href="https://www.amazon.com.br/Mamba-Mentality-How-Play/dp/0374201234/ref=sr_1_1?qid=1688833870&refinements=p_27%3AKobe+Bryant&s=books&sr=1-1&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74 ">Livro</a></div>
+    </nav>
+    <h1><a class="alex" href="file:///C:/Users/flash/Desktop/mj23/site2/index.html">Kobe Bryant</a></h1>
+</div>
+<div class="loader">
+    <div class="img">
+        <img src="imagens/1.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/2.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/3.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/4.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/5.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/6.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="imagens/7.jpg" alt="">
+    </div>
+</div>
+<div class="overlay">
+    <div class="col">
+        <h2><div>The</div></h2>
+        <h2><div>Black</div></h2>
+        <h2><div>Mamba</div></h2>
+    </div>
+    <div class="col">
+        <h2><div><span>clique</span> na tela</div></h2>
+    </div>
+</div>
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script>
+    gsap.from("h2 div", 1.5, {
+        yPercent: 100,
+        ease: "power4.inOut",
+        stagger: {
+            amount: 0.5,
+        },
+    });
+
+    gsap.to("h2", 1.5, {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        ease: "power4.inOut",
+        stagger: {
+            amount:0.5,
+        },
+    });
+
+    document.addEventListener("DOMContentLoaded",
+    function () {
+    let overlay = document.querySelector(".overlay");
+     overlay.addEventListener("click", function () {
+        gsap.to("h2 div", 1.5, {
+            yPercent: -100,
+            ease: "power4.inOut",
+            stagger: {
+                amount: 0.5,
+            },
+        });
+
+        gsap.to("h2", 1.5, {
+            clipPath: "polygon(0 85%, 100% 85%, 100% 100%, 0 100%)",
+            ease: "power4.inOut",
+            stagger: {
+                amount: 0.5,
+            },
+        },
+         0
+        );
+
+        gsap.to(".overlay", 2, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            else:"power4.inOut",
+        });
+
+        gsap.to(".img", 2, {
+            clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0% 0%)",
+            ease: "power4.inOut",
+            stagger:{
+                amount: 1.5,
+            },
+        });
+
+        gsap.to(".loader", 2, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            ease: "power4.inOut",
+            delay: 2,
+        });
+     });
+    });
+</script>
+
+
+
+</body>
+</html>
